@@ -1,0 +1,13 @@
+<h1>Realiza una pregunta de Si o No</h1>
+
+<input type="text" placeholder="¿Qué deseas preguntar?" [(ngModel)]="pregunta" >
+
+<button (click)="onSubmit()">Pregunta</button>
+
+<div style="margin-top: 20px;">
+  <h2>{{respuesta?.answer}}</h2>
+
+  <ng-container *ngIf="respuesta">
+    <img *ngIf="respuesta.image" [src]="respuesta.image" alt="">
+  </ng-container>
+</div>
